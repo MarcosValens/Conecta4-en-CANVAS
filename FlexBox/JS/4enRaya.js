@@ -91,13 +91,15 @@ canvas.addEventListener('click', function (e) {
         }
     }
     //LOGICA
-    if (Math.floor(fila/100)!==0){
-        Fichas.fila = Math.floor(fila/100)+1;
+    if (Math.floor(fila / 100) !== 0) {
+        Fichas.fila = Math.floor(fila / 100) + 1;
     }
-    else Fichas.fila = Math.floor(fila/100);
-    /*tablero[Fichas.fila-1].splice(Fichas.columna-1,1,Fichas)*/
-    tablero[Fichas.fila-1][Fichas.columna-1] = Fichas;
-    comprueba(tablero,Fichas)
+    else Fichas.fila = Math.floor(fila / 100);
+
+    if (Fichas.fila === 0) {
+        tablero[Fichas.fila][Fichas.columna - 1] = Fichas;
+    } else tablero[Fichas.fila - 1][Fichas.columna - 1] = Fichas;
+    comprueba(tablero, Fichas)
 });
 
 function ajustar(xx, yy) {
@@ -116,46 +118,102 @@ function FICHAS_TABLERO(fila, columna, color) {
 function comprueba(tablero, Fichas) {
     var linea = 0;
     //COMPROBACION HORIZONTAL
-    for (var i = 0; i < tablero.length; i++){
-        for (var j = 0; j < tablero[i].length; j++){
-            if (tablero[i][j].color === Fichas.color){
+    for (var i = 0; i < tablero.length; i++) {
+        for (var j = 0; j < tablero[i].length; j++) {
+            if (tablero[i][j].color === Fichas.color) {
                 linea++;
-                if (linea === 4){
+                if (linea === 4) {
                     alert("Has ganado!");
-                    linea = 0;
+                    return null;;
                 }
             } else linea = 0;
         }
     }
 
     //COMPROBACION VERTICAL
-    for (var k = 0; k < tablero.length; k++){
+    for (var k = 0; k < tablero.length; k++) {
         linea = 0;
-        for (var l = 0; l < tablero.length; l++){
-            if (tablero[l][k].color === Fichas.color){
+        for (var l = 0; l < tablero.length; l++) {
+            if (tablero[l][k].color === Fichas.color) {
                 linea++;
-                if (linea === 4){
+                if (linea === 4) {
                     alert("Has ganado!");
-                    linea = 0;
+                    return null;
                 }
             } else linea = 0;
         }
     }
     //COMPROBACION DIAGONAL DERECHA
     var aux = 0;
-    for (var m = 0; m < tablero.length; m++){
-        console.log("hola");
-        linea = 0;
+    for (var m = 0; m < tablero.length; m++) {
         aux = m;
-        for (var n = tablero[m].length; n > m; n--){
-            aux++;
-            if (tablero[n][aux].color === Fichas.color){
+        linea = 0;
+        for (var n = 0; n < tablero[0].length - 1; n++) {
+            if (tablero[aux][n].color === Fichas.color) {
                 linea++;
-                if (linea === 4){
+                if (linea === 4) {
                     alert("Has ganado!");
-                    linea = 0;
+                    return null;
                 }
             } else linea = 0;
+            aux--;
+            if (aux < 0) {
+                break;
+            }
+        }
+    }
+    for (var p = 0; p < tablero[0].length;p++) {
+        linea= 0;
+        aux = p;
+        for (var o = tablero.length-1; o >= 0; o--) {
+            console.log(tablero[o][aux].color);
+            if (tablero[o][aux].color === Fichas.color) {
+                linea++;
+                if (linea === 4) {
+                    alert("Has ganado!");
+                    return null;
+                }
+            } else linea = 0;
+            aux++;
+            if (aux === tablero[0].length) {
+                break;
+            }
+        }
+    }
+    //COMPROBACION DIAGONAL IZQUIERDA
+     aux = 0;
+    for (var q = 0; q < tablero.length; q++) {
+        aux = q;
+        linea = 0;
+        for (var r = tablero[0].length - 1; r > 0; r--) {
+            if (tablero[aux][r].color === Fichas.color) {
+                linea++;
+                if (linea === 4) {
+                    alert("Has ganado!");
+                    return null;
+                }
+            } else linea = 0;
+            aux--;
+            if (aux < 0) {
+                break;
+            }
+        }
+    }
+    for (var s = tablero[0].length-1; s > 0; s--) {
+        linea = 0;
+        aux = s;
+        for (var t = tablero.length - 1; t >= 0; t--) {
+            if (tablero[t][aux].color === Fichas.color) {
+                linea++;
+                if (linea === 4) {
+                    alert("Has ganado!");
+                    return null;
+                } else linea = 0;
+            }
+            aux--;
+            if (aux === 0) {
+                break;
+            }
         }
     }
 }
