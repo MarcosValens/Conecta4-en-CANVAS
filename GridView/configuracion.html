@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Play4Fun web of JavaScript games">
+    <meta name="author" content="Marcos Valens Fraile">
+    <meta name="keywords" content="games, JavaScript, juegos, 4enraya, jugar, play, play4fun">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Play4Fun</title>
+</head>
+<body>
+<header class="col-12">
+    <h1><a href="#"><img src="images/play4fun_logo.png" alt="PLAY4FUN" height="150" width="300" class="col-6"></a></h1>
+    <nav class="col-12">
+        <ul>
+            <li class="col-2"><a href="index.html">Juega!</a></li>
+            <li class="col-2"><a href="ayuda.html">Ayuda</a></li>
+            <li class="col-2"><a href="configuracion.html">Configuración</a></li>
+            <li class="col-2"><a href="mapa.html">Mapa</a></li>
+            <li class="col-2"><a href="contacto.html">Contacto</a></li>
+            <li class="col-2"><a href="plugin.html">Plugin</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="wrapper">
+        <section class="col-11">
+            <h3>Opciones de configuración</h3>
+            <form action="/action_page.php" method="post" enctype="application/x-www-form-urlencoded" class="col-10">
+                <fieldset>
+                    <legend>VS</legend>
+                    <label for="humano">
+                        <input type="radio" name="vs" value="humano" id="humano" checked>
+                        Humano
+                    </label>
+                    <label for="CPU">
+                        <input type="radio" name="vs" value="cpu" id="CPU">
+                        CPU
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Color Jugador 1</legend>
+                    <label for="yellow1">
+                        <input type="radio" name="color1" value="Yellow" id="yellow1" checked>
+                        Amarillo
+                    </label>
+                    <label for="blue1">
+                        <input type="radio" name="color1" value="blue" id="blue1">
+                        Azul
+                    </label>
+                    <label for="red1">
+                        <input type="radio" name="color1" value="red" id="red1">
+                        Rojo
+                    </label>
+                    <label for="pink1">
+                        <input type="radio" name="color1" value="pink" id="pink1">
+                        Rosa
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Color Jugador 2/CPU</legend>
+                    <label for="yellow2">
+                        <input type="radio" name="color2" value="Yellow" id="yellow2" checked>
+                        Amarillo
+                    </label>
+                    <label for="blue2">
+                        <input type="radio" name="color2" value="blue" id="blue2">
+                        Azul
+                    </label>
+                    <label for="red2">
+                        <input type="radio" name="color2" value="red" id="red2">
+                        Rojo
+                    </label>
+                    <label for="pink2">
+                        <input type="radio" name="color2" value="pink" id="pink2">
+                        Rosa
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Dificultad</legend>
+                    <label for="facil">
+                        <input type="radio" name="dificultad" value="Fácil" id="facil">
+                        Fácil
+                    </label>
+                    <label for="normal">
+                        <input type="radio" name="dificultad" value="Normal" id="normal" checked>
+                        Normal
+                    </label>
+                    <label for="dificil">
+                        <input type="radio" name="dificultad" value="Dificil" id="dificil">
+                        Díficil
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Tablero</legend>
+                    <label for="classic">
+                        <input type="radio" name="tablero" value="Classic" id="classic" checked>
+                        Clásico
+                    </label>
+                    <label for="filas">
+                        <select name="filas" id="filas">
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6" selected>6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        Filas
+                    </label>
+                    <label for="columnas">
+                        <select name="columnas" id="columnas">
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7" selected>7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        Columnas
+                    </label>
+                    <label for="circle">
+                        <input type="radio" name="tablero" value="Circle" id="circle">
+                        Círculo
+                    </label>
+                    <label for="radio">
+                        <select name="radio" id="radio">
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7" selected>7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        Radio
+                    </label>
+                </fieldset>
+                <input type="submit" value="Guardar cambios">
+            </form>
+        </section>
+    </div>
+</main>
+<footer>
+    <section>
+        <h6>Play4Fun</h6>
+        <p>
+            <a href="index.html">Inicio</a>
+            ·
+            <a href="http://www.esliceu.com/">Es Liceu</a>
+            ·
+            <a href="ayuda.html">Faq</a>
+            ·
+            <a href="contacto.html">Contacto</a>
+        </p>
+        <p>Play4Fun &#169; 2017</p>
+    </section>
+    <section>
+        <ul>
+            <li>
+                <img src="images/maps_icon_grey.png" alt="maps_logo" width="800" height="800">
+                <address>Margalida Monlau 49 Palma de Mallorca, España</address>
+            </li>
+            <li>
+                <img src="images/phone_icon_grey.png" alt="phone_logo" width="800" height="800">
+                <a href="tel:+34685685685">+34 685 685 685</a>
+            </li>
+            <li>
+                <img src="images/mail_icon_grey.png" alt="mail_logo" width="800" height="800">
+                <a href="mailto:play4fun@gmail.com">Play4Fun@gmail.com</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <p>
+            <span>Sobre Play4Fun &#169;</span>
+            Play4Fun &#169; es una practica de Marcos Valens Fraile para el CFGS de desenvolupamiento web de Es Liceu,
+            Marratxi.
+            Realizado el año 2017/18.
+        </p>
+        <section>
+            <ul>
+                <li><a href="#"><img src="images/facebook_icon_grey.png" alt="facebook_icon" height="800"
+                                     width="800"></a></li>
+                <li><a href="#"><img src="images/twitter_icon_grey.png" alt="twitter_icon" height="800" width="800"></a>
+                </li>
+                <li><a href="#"><img src="images/linkedin_icon_grey.png" alt="linkedin_icon" height="800"
+                                     width="800"></a></li>
+                <li><a href="#"><img src="images/github_icon_grey.png" alt="github_icon" height="800" width="800"></a>
+                </li>
+            </ul>
+        </section>
+    </section>
+</footer>
+</body>
+</html>

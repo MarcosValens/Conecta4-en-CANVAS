@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+    font-family: JourneytoThailand;
+    src: url(../fonts/JourneytoThailand.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: url("../images/background2.jpg") center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Kaushan Script;
+    min-height: 100vh;
+
+}
+
+.wrapper {
+    padding-top: 20vh;
+}
+
+/*HEADER*/
+h1 > a > img {
+    display: block;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    animation: elastico 1s linear infinite;
+    animation-play-state: paused;
+}
+
+h1 > a > img:hover {
+    animation-play-state: running;
+}
+
+nav {
+    margin-top: 10vh;
+}
+
+li {
+    display: inline;
+    text-align: center;
+    float: left;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    font-family: Pacifico, cursive;
+    color: #000000;
+    font-size: 2em;
+    animation: color 4s linear infinite;
+    animation-play-state: paused;
+}
+
+nav > ul > li > a:hover {
+    color: #656565;
+    animation-play-state: running;
+}
+
+/*FOOTER*/
+
+footer {
+    clear: both;
+    margin-top: 10vh;
+    background-color: #292c2f;
+    text-align: left;
+    padding: 55px 50px;
+    display: inline-block;
+
+}
+
+footer > section {
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer > section > p:first-child {
+    margin-top: 0 !important;
+}
+
+footer > section > h6 {
+    font-family: JourneytoThailand;
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 2vh;
+}
+
+footer section p {
+
+    margin: 5vh 0;
+    color: grey;
+    font-weight: bolder;
+    font-size: 0.75em;
+}
+
+address {
+
+    font-style: normal;
+}
+
+footer a {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer section ul li {
+    text-align: left;
+}
+
+footer section img {
+    width: 2vw !important;
+    height: 2vw !important;
+    float: left;
+    margin: 1vh 1vw 1vh 0;
+}
+
+span {
+
+    font-size: 1em;
+    color: #fff;
+    display: block;
+    margin-bottom: 2vh;
+}
+
+/*JUEGA!*/
+
+canvas {
+    background-color: #5e68ff;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10vh;
+    display: block;
+}
+
+/*AYUDA*/
+
+
+main  section {
+    background: url("../images/background.jpg") center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1em #5e68ff solid ;
+    border-radius: 10em 10em 10em 10em;
+}
+
+main section section {
+    background-image: none;
+    display: inline-block;
+    margin-left: 10vw;
+    padding-top: 5vh;
+    font-family: 'Roboto', sans-serif;
+    vertical-align: top;
+    border: none;
+}
+
+h3 {
+    margin-bottom: 2vh;
+}
+
+#ayuda iframe {
+    width: 30vw;
+    margin-bottom: 3vh;
+}
+
+/*CONFIGURACION*/
+
+main div section {
+font-family: 'Roboto', sans-serif;
+}
+
+main div section form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+main div section h3 {
+    text-align: center;
+}
+
+main div section form fieldset {
+    margin: 3vh 0;
+}
+
+main div section form input:last-child {
+    margin-bottom: 3vh;
+}
+
+/*MAPA*/
+
+main div #mapa iframe {
+    width: 100%;
+    border-radius: 10em;
+}
+
+/*CONTACTO*/
+
+#contacto {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#contacto label{
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#contacto label input {
+    width: 10%;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#contacto label textarea {
+    width: 50%;
+    height: 30vh;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media screen and (min-width: 960px) {
+    .col-1 {
+        width: 8.3333%;
+    }
+
+    .col-2 {
+        width: 16.6666%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.3333%;
+    }
+
+    .col-5 {
+        width: 41.6666%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.3333%;
+    }
+
+    .col-8 {
+        width: 66.6666%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.3333%;
+    }
+
+    .col-11 {
+        width: 91.6666%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 959px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /*HEADER*/
+
+    header img {
+        width: 80vw;
+    }
+
+    nav li {
+        margin-left: 15vw;
+    }
+
+    nav a {
+        display:block;
+        text-align:center;
+        width:200px;
+        text-decoration:none;
+    }
+
+    /*FOOTER*/
+
+    h6 {
+        margin: 1vh;
+    }
+
+    footer {
+        clear: both;
+        margin-top: 10vh;
+        background-color: #292c2f;
+        text-align: left;
+        display: inline-block;
+        padding: 3vh 0;
+
+    }
+
+    footer > section > p {
+        margin: 1vh 1vw;
+    }
+
+    footer > section > p > span {
+        margin: 1vh 0;
+    }
+
+    footer > section > ul > li {
+        margin: 0 1vw;
+    }
+
+    footer section img {
+        width: 4vw !important;
+        height: 4vw !important;
+        float: left;
+        margin: 1vh 1vw 1vh 0;
+    }
+
+    /*AYUDA*/
+
+    main > div > section {
+        clear: both;
+        border-radius: 0;
+        text-align: justify;
+        padding: 0 10vw;
+    }
+    main div section section {
+        margin-left: 0;
+    }
+
+    #ayuda iframe {
+    width: 75vw;
+    }
+
+    /*CONFIGURACION*/
+
+    main div section form label {
+        display: block;
+    }
+
+    /*CONTACTO*/
+
+    #contacto label textarea {
+        width: 100%;
+        height: 30vh;
+        margin-top: 3vh;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #contacto label input {
+        width: 70%;
+    }
+
+}
+
+/*ANIMACION*/
+
+@keyframes color {
+
+    0% {
+        color: #000000;
+    }
+    25% {
+        color: #1f1d1e;
+    }
+    50% {
+        color: #4a484a;
+    }
+    75% {
+        color: #777674;
+    }
+    100% {
+        color: #151515;
+    }
+}
+@keyframes elastico {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
