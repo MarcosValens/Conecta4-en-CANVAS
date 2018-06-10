@@ -93,6 +93,14 @@ main div {
     padding-top: 1em;
     padding-bottom: 1em;
 }
+
+.tablero {
+    flex-basis: 40vw !important;
+    border-radius: 0 !important;
+    background-color: #5e68ff;
+    background-image: none !important;
+}
+
 main div section {
     display: flex;
     justify-content: space-around;
@@ -111,6 +119,10 @@ main {
 }
 
 /*AYUDA*/
+
+legend {
+    text-align: center;
+}
 
 main div .ayuda {
     padding: 1em 0;

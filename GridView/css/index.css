@@ -24,11 +24,13 @@ body {
 }
 
 .wrapper {
+    clear:both;
     padding-top: 20vh;
 }
 
 /*HEADER*/
 h1 > a > img {
+    float:none !important;
     display: block;
     margin-top: 10vh;
     margin-left: auto;
@@ -63,6 +65,12 @@ nav > ul > li > a {
 nav > ul > li > a:hover {
     color: #656565;
     animation-play-state: running;
+}
+
+/*BODY*/
+
+body>main>div.wrapper>section.col-10{
+    margin: 0 auto !important;
 }
 
 /*FOOTER*/
@@ -135,6 +143,11 @@ span {
 
 /*JUEGA!*/
 
+.tablero{
+    border-radius: 0;
+    background: #5e68ff none !important;
+}
+
 canvas {
     background-color: #5e68ff;
     margin-left: auto;
@@ -146,6 +159,7 @@ canvas {
 
 
 main  section {
+
     background: url("../images/background.jpg") center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -156,7 +170,9 @@ main  section {
     border-radius: 10em 10em 10em 10em;
 }
 
+
 main section section {
+    float: none !important;
     background-image: none;
     display: inline-block;
     margin-left: 10vw;
@@ -177,13 +193,17 @@ h3 {
 
 /*CONFIGURACION*/
 
+
 main div section {
-font-family: 'Roboto', sans-serif;
+
+    font-family: 'Roboto', sans-serif;
+    float: none !important;
 }
 
 main div section form {
     margin-left: auto;
     margin-right: auto;
+    float: none !important;
 }
 
 
@@ -202,8 +222,11 @@ main div section form input:last-child {
 /*MAPA*/
 
 main div #mapa iframe {
-    width: 100%;
+    display:block;
+    margin: 0 auto;
+    width: 90%;
     border-radius: 10em;
+    padding-bottom: 4vh;
 }
 
 /*CONTACTO*/
@@ -223,7 +246,7 @@ main div #mapa iframe {
 }
 
 #contacto label input {
-    width: 10%;
+    width: 50%;
     margin-top: 3vh;
     margin-left: auto;
     margin-right: auto;
@@ -239,56 +262,12 @@ main div #mapa iframe {
     display: block;
 }
 
-@media screen and (min-width: 960px) {
-    .col-1 {
-        width: 8.3333%;
-    }
+/*PLUGIN*/
 
-    .col-2 {
-        width: 16.6666%;
-    }
+ main>div.wrapper>section>div{
+     height: 60vh;
+ }
 
-    .col-3 {
-        width: 25%;
-    }
-
-    .col-4 {
-        width: 33.3333%;
-    }
-
-    .col-5 {
-        width: 41.6666%;
-    }
-
-    .col-6 {
-        width: 50%;
-    }
-
-    .col-7 {
-        width: 58.3333%;
-    }
-
-    .col-8 {
-        width: 66.6666%;
-    }
-
-    .col-9 {
-        width: 75%;
-    }
-
-    .col-10 {
-        width: 83.3333%;
-    }
-
-    .col-11 {
-        width: 91.6666%;
-    }
-
-    .col-12 {
-        width: 100%;
-    }
-
-}
 
 @media screen and (max-width: 959px) {
     * {
@@ -431,5 +410,65 @@ main div #mapa iframe {
         transform: scale3d(1, 1, 1);
     }
 }
+@media screen and (min-width: 960px) {
+    .col-1 {
+        width: 8.3333%;
+        float:left;
+    }
 
+    .col-2 {
+        width: 16.6666%;
+        float:left;
+    }
 
+    .col-3 {
+        width: 25%;
+        float:left;
+    }
+
+    .col-4 {
+        width: 33.3333%;
+        float:left;
+    }
+
+    .col-5 {
+        width: 41.6666%;
+        float:left;
+    }
+
+    .col-6 {
+        width: 50%;
+        float:left;
+    }
+
+    .col-7 {
+        width: 58.3333%;
+        float:left;
+    }
+
+    .col-8 {
+        width: 66.6666%;
+        float:left;
+    }
+
+    .col-9 {
+        width: 75%;
+        float:left;
+    }
+
+    .col-10 {
+        width: 83.3333%;
+        float:left;
+    }
+
+    .col-11 {
+        width: 91.6666%;
+        float:left;
+    }
+
+    .col-12 {
+        width: 100%;
+        float:left;
+    }
+
+}
