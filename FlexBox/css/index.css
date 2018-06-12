@@ -236,6 +236,11 @@ main>div>section>h4 {
     flex-basis: 50%;
     padding-bottom: 1em;
 }
+#mapa {
+    width: 70vw;
+    height: 55vh;
+    margin: 10vh auto;
+}
 
 /*IFRAME*/
 

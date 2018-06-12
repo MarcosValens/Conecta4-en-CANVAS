@@ -5,6 +5,13 @@ var filaT = 6;
 var columnaT = 7;
 var turno = 0;
 
+/*RECUPERA EL CANVAS*/
+var image = new Image();
+image.onload = function() {
+    c.drawImage(image, 0, 0);
+};
+image.src = localStorage.getItem('canvas');
+
 /*RECUPERA EL COLOR DE LAS FICHAS*/
 var j1 = localStorage.getItem("color1");
 console.log(j1);
@@ -36,7 +43,7 @@ if (lsLog == null) {
 /*RECUPERA EL TABLERO PARA PINTAR*/
 
 var lsPint = localStorage.getItem("arrayPintar");
-if (lsPint == null){
+if (!lsPint){
     var tableroPintado = [];
 } else var tableroPintado = JSON.parse(localStorage.getItem("arrayPintar"));
 
